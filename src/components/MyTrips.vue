@@ -46,7 +46,7 @@ export default {
         <h3>{{ trip.title }}</h3> 
         <p>С {{ formatDate(trip.startDate) }} по {{ formatDate(trip.endDate) }}</p>
         <ul>
-          <li li v-for="(place, index) in trip.places" :key="index"> {{ place }}</li>
+          <li v-for="(place, index) in trip.places" :key="index"> {{ place }}</li>
         </ul>
         <button class="btn btn-danger btn-sm" @click="deleteTrip(trip._id)">Удалить</button>
       </div>
