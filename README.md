@@ -1,29 +1,84 @@
-# travelplanner
+# TravelPlanner
 
-This template should help get you started developing with Vue 3 in Vite.
+Учебное full-stack веб-приложение для планирования поездок.
 
-## Recommended IDE Setup
+В приложении можно создать поездку, указать даты и список мест, сохранить маршрут в MongoDB, посмотреть сохранённые поездки и удалить ненужные.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Возможности
 
-## Customize configuration
+* создание новой поездки;
+* выбор даты начала и окончания;
+* добавление нескольких мест в маршрут;
+* просмотр сохранённых поездок;
+* удаление поездок;
+* хранение данных в MongoDB;
+* REST API на Express.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Стек
 
-## Project Setup
+**Frontend:** Vue 3, Vue Router, Axios, Day.js, Vite
 
-```sh
+**Backend:** Node.js, Express, MongoDB, Mongoose, CORS
+
+## Структура приложения
+
+Frontend содержит три основных экрана:
+
+* главная страница;
+* создание маршрута;
+* список сохранённых маршрутов.
+
+Backend отвечает за хранение данных и предоставляет REST API для работы с поездками.
+
+## Запуск локально
+
+### 1. Установить зависимости
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 2. Запустить MongoDB
 
-```sh
+Приложение использует локальную MongoDB:
+
+```text
+mongodb://localhost:27017/travelplanner
+```
+
+### 3. Запустить backend
+
+```bash
+npm start
+```
+
+Backend запускается на:
+
+```text
+http://localhost:3005
+```
+
+### 4. Запустить frontend
+
+В отдельном терминале:
+
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+Frontend по умолчанию запускается на:
 
-```sh
-npm run build
+```text
+http://localhost:5173
 ```
+
+## API
+
+`GET /trips` — получить список поездок
+`POST /trips` — создать поездку
+`PUT /trips/:id` — обновить поездку
+`DELETE /trips/:id` — удалить поездку
+
+## О проекте
+
+TravelPlanner был создан как учебный проект для практики Vue, клиент-серверного взаимодействия, REST API и работы с MongoDB.
