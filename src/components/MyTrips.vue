@@ -10,12 +10,6 @@ export default {
   },
   async mounted() {
     this.fetchTrips();
-    try {
-      const res = await axios.get('http://localhost:3005/trips');
-      this.trips = res.data;
-    } catch (err) {
-      console.error('Ошибка при загрузке маршрутов:', err);
-    }
   },
   methods: {
     formatDate(date) {
