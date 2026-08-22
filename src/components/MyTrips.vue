@@ -17,7 +17,7 @@ export default {
     },
     async fetchTrips() {
       try {
-        const response = await axios.get('http://localhost:3005/trips'); // ← исправлено
+        const response = await axios.get('http://localhost:3005/trips'); 
         this.trips = response.data;
       } catch (error) {
         console.error('Ошибка при получении маршрутов:', error);
@@ -25,7 +25,7 @@ export default {
     },
     async deleteTrip(id) {
       try {
-        await axios.delete(`http://localhost:3005/trips/${id}`); // ← исправлено
+        await axios.delete(`http://localhost:3005/trips/${id}`)
         this.fetchTrips();
       } catch (error) {
         console.error('Ошибка при удалении маршрута:', error);
@@ -43,7 +43,7 @@ export default {
     </div>
     <div class="list-group">
       <div class="trip-card" v-for="trip in trips" :key="trip._id" >
-        <h3>{{ trip.title }}</h3> <!-- ← исправлено: было trip.name -->
+        <h3>{{ trip.title }}</h3> 
         <p>С {{ formatDate(trip.startDate) }} по {{ formatDate(trip.endDate) }}</p>
         <ul>
           <li li v-for="(place, index) in trip.places" :key="index"> {{ place }}</li>
