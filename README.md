@@ -74,10 +74,10 @@ http://localhost:5173
 
 ## API
 
-`GET /trips` — получить список поездок
-`POST /trips` — создать поездку
-`PUT /trips/:id` — обновить поездку
-`DELETE /trips/:id` — удалить поездку
+- `GET /trips` — получить список поездок;
+- `POST /trips` — создать поездку;
+- `PUT /trips/:id` — обновить поездку;
+- `DELETE /trips/:id` — удалить поездку.
 
 ## О проекте
 
